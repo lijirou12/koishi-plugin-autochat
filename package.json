@@ -1,0 +1,29 @@
+{
+  "name": "koishi-plugin-autochat",
+  "version": "1.0.0",
+  "description": "定时向 ChatLuna / Gemini 发送北京时间并回传到 QQ/群 的 Koishi 插件",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "author": "",
+  "license": "MIT",
+  "keywords": [
+    "koishi-plugin",
+    "autochat",
+    "chatluna",
+    "gemini"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs",
+    "dev": "koishi-dev"
+  },
+  "peerDependencies": {
+    "koishi": "^4.15.0",
+    "koishi-plugin-chatluna": "*"
+  },
+  "devDependencies": {
+    "tsup": "^7.2.0",
+    "typescript": "^5.4.0"
+  },
+  "packageManager": "pnpm@10.12.4+sha512.5ea8b0deed94ed68691c9bad4c955492705c5eeb8a87ef86bc62c74a26b037b08ff9570f108b2e4dbd1dd1a9186fea925e527f141c648e85af45631074680184"
+}
+ 
