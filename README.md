@@ -4,7 +4,7 @@
 [![koishi](https://img.shields.io/badge/koishi-4.x-orange?style=flat-square)](https://koishi.chat/)
 [![license](https://img.shields.io/github/license/lijirou12/koishi-plugin-autochat?style=flat-square)](LICENSE)
 
-> 🕰️ 定时向 ChatLuna 询问并自动将回复发送到指定频道的 Koishi 插件。
+> 🕰️ 定时向 ChatLuna 询问并自动将回复发送到指定频道的 Koishi 插件，旨在实现AI主动发起聊天。
 > 
 > 典型场景：每隔 60 分钟询问当前时间并记录到群聊。
 
@@ -26,11 +26,11 @@ yarn add koishi-plugin-autochat
 npm i koishi-plugin-autochat
 ```
 
-> 本插件依赖 `koishi-plugin-chatluna`，请确保已安装并正确配置对应平台（如 Google Gemini、OpenAI 等）。
+> 本插件依赖 `koishi-plugin-chatluna`，请确保已安装并正确配置对应平台（如 Google Gemini、OpenAI 等目前只确定适配了Gemini）。
 
 ## 🚀 快速上手
 
-在 `koishi.yml` 中启用插件并填写配置：
+在 `koishi.yml` 中启用插件填写配置也可以直接在webui中配置：
 
 ```yaml
 plugins:
