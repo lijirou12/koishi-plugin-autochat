@@ -5060,15 +5060,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"koishi-plugin-autochat@workspace:external/autochat":
-  version: 0.0.0-use.local
-  resolution: "koishi-plugin-autochat@workspace:external/autochat"
-  peerDependencies:
-    koishi: ^4.18.7
-    koishi-plugin-chatluna-google-gemini-adapter: "*"
-  languageName: unknown
-  linkType: soft
-
 "koishi-plugin-chatluna-google-gemini-adapter@npm:1.2.0":
   version: 1.2.0
   resolution: "koishi-plugin-chatluna-google-gemini-adapter@npm:1.2.0"
