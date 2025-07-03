@@ -1,0 +1,77 @@
+plugins:
+  group:server:
+    server:rovfe0:
+      port: 5140
+      maxPort: 5149
+    ~server-satori:sx6ek7: {}
+    ~server-temp:wxp9jv: {}
+  group:basic:
+    ~admin:13kf9f: {}
+    ~bind:315ac4: {}
+    commands:g8per9: {}
+    help:eago7h: {}
+    http:cuvro3: {}
+    ~inspect:wayfp4: {}
+    locales:kipj89: {}
+    proxy-agent:o3ynhz: {}
+    rate-limit:8n9vek: {}
+    telemetry:agh92y: {}
+  group:console:
+    actions:7i4h3l: {}
+    analytics:bbsg45: {}
+    android:b64y1r:
+      $if: env.KOISHI_AGENT?.includes('Android')
+    ~auth:c2q0pd: {}
+    config:mhonud: {}
+    console:j09p9y:
+      open: true
+    dataview:22bd1o: {}
+    desktop:973445:
+      $if: env.KOISHI_AGENT?.includes('Desktop')
+    explorer:xqfyie: {}
+    logger:j9wax4: {}
+    insight:a6g2oj: {}
+    market:mxblo9:
+      search:
+        endpoint: https://registry.koishi.chat/index.json
+    notifier:6xg470: {}
+    oobe:yeji3b: {}
+    sandbox:u1jw5c: {}
+    status:bpm5dj: {}
+    theme-vanilla:aq1o1w: {}
+  group:storage:
+    ~database-mongo:74clck:
+      database: koishi
+    ~database-mysql:8b58iv:
+      database: koishi
+    ~database-postgres:au17rz:
+      database: koishi
+    database-sqlite:box3p6:
+      path: data/koishi.db
+    assets-local:ax7vue: {}
+  group:app_logic:
+    adapter-onebot:p9uyjq:
+      protocol: ws
+      endpoint: https://aevezmlovryj.ap-southeast-1.clawcloudrun.com
+      selfId: ${ONEBOT_SELF_ID}
+      token: ${ONEBOT_TOKEN}
+    chatluna:fa7xn3:
+      defaultModel: gemini/gemini-2.0-flash
+      isProxy: true
+      proxyAddress: http://127.0.0.1:10808
+    chatluna-google-gemini-adapter:kqow0h:
+      apiKeys:
+        - - ${GEMINI_API_KEY}
+          - https://generativelanguage.googleapis.com/v1beta
+    ~autochat:4ncok7:
+      interval: 1
+      template: 现在是北京时间 {time}，请忽略这条系统提醒，主动向客户发起话题。
+      model: models/gemini-2.0-flash
+      channelId: '2844635137'
+      channelType: private
+      botSelfId: '2364639792'
+      prompt: 现在是北京时间 {time}，请忽略这条系统提醒主动向用户发起话题。
+  group:develop:
+    $if: env.NODE_ENV === 'development'
+    hmr:rf92hm:
+      root: .
